@@ -1,51 +1,110 @@
 body{
     
-    background-color: rgba(233, 255, 250, 0.39);
+    background-color: 	rgba(255, 255, 240, 0.507);
+    font-family: 'Arima Madurai', cursive;
 }
 
 .container{
     display: grid;
-    width: 100%;
+    max-width: 1280px;
     margin:auto;
-    grid-template-columns: repeat(5, 300px);
-    grid-template-rows: repeat(4, 500px);
+    padding: 20px;
     grid-template-areas:
-    "title title menu menu menu"
-    "header header header header header"
-    "content content content content content"
-    "footer footer footer footer footer footer";
+    'head . nav nav  nav'
+    '. caption caption caption .'
+    '. hosting themes framework .'
+    '. . question . .'
+    '. . footer . .';
 }
 
 .logo{
-    grid-area: title;
+    grid-area: head;
+    font-size: 30px;
+    font-weight: bold;
 }
 .nav{
-    grid-area: menu;
+    grid-area: nav;
+}
+.nav ul{
+   margin-left: 200px;
+   
+}
+.nav li{
+    display: inline-block;
+    list-style: none;
+    padding-left: 10px;
+    
+}
+.nav li img{
+    position: relative;
+    top: 3px;
+    left:0px;
+    height:1em;
+    overflow: initial;
 }
 .title{
-    grid-area:header;
+    grid-area: caption;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.title h1{
+    margin-bottom:0px;
+    
+}
+.title h2 {
+    font-size:35px;
+    margin-top:0px;
 }
 .title-caption{
-    grid-area:header;
+    grid-area: caption;
+    text-align: center;
+    margin-top: 275px;
+    margin-bottom: 20px;
+    color: #0080ff;
 }
 .cat-hosting{
-    grid-area: content;
+    grid-area: hosting;
+    text-align: center;
+   font-weight:bolder;
+}
+.cat-hosting img{
+    width: 50%;
+    height: auto;
 }
 .cat-themes{
-    grid-area: content;
+    grid-area: themes;
+    text-align: center;
+    font-weight:bolder;
+}
+.cat-themes img{
+    width: 50%;
+    height: auto;
 }
 .cat-framework{
-    grid-area: content;
+    grid-area: framework;
+    text-align: center;
+    font-weight:bolder;
+}
+.cat-framework img{
+    width: 50%;
+    height: auto;
 }
 .button{
-    grid-area: content;
+    color: #0080ff;
+    
 }
 .question-line{
-    grid-area: footer;
-}
-.color-container{
-    background-color:rgba(152, 251, 152, 0.253)
+    grid-area: question;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    color: lightslategray;
+    text-decoration: underline;
 }
 .footer{
     grid-area: footer;
+    text-align: center;
+    
+    font-size: 10px;
 }
