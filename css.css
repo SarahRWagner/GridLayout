@@ -1,0 +1,51 @@
+body{
+    
+    background-color: rgba(233, 255, 250, 0.39);
+}
+
+.container{
+    display: grid;
+    width: 100%;
+    margin:auto;
+    grid-template-columns: repeat(5, 300px);
+    grid-template-rows: repeat(4, 500px);
+    grid-template-areas:
+    "title title menu menu menu"
+    "header header header header header"
+    "content content content content content"
+    "footer footer footer footer footer footer";
+}
+
+.logo{
+    grid-area: title;
+}
+.nav{
+    grid-area: menu;
+}
+.title{
+    grid-area:header;
+}
+.title-caption{
+    grid-area:header;
+}
+.cat-hosting{
+    grid-area: content;
+}
+.cat-themes{
+    grid-area: content;
+}
+.cat-framework{
+    grid-area: content;
+}
+.button{
+    grid-area: content;
+}
+.question-line{
+    grid-area: footer;
+}
+.color-container{
+    background-color:rgba(152, 251, 152, 0.253)
+}
+.footer{
+    grid-area: footer;
+}
